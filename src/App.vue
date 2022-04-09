@@ -59,19 +59,19 @@
     <div class="flex">
       <div class="fix-width">
         <div class="button" style="background: #24dfb0" @click="buttonClick(0)">
-          Yoyo
+          Click
         </div>
       </div>
       <div class="w-5"></div>
       <div class="fix-width">
         <div class="button" style="background: #207ffe" @click="buttonClick(1)">
-          Hawking
+          Yoyo
         </div>
       </div>
       <div class="w-5"></div>
       <div class="fix-width">
         <div class="button" style="background: #fe8c21" @click="buttonClick(2)">
-          Click
+          Hawking
         </div>
       </div>
     </div>
@@ -111,11 +111,11 @@ const runTime = () => {
 // 按钮事件
 const buttonClick = (index: number) => {
   if (index == 0) {
-    updateScore("#24dfb0", Yoyo);
+    updateScore("#24dfb0", Click);
   } else if (index == 1) {
-    updateScore("#207ffe", Hawking);
+    updateScore("#207ffe", Yoyo);
   } else {
-    updateScore("#fe8c21", Click);
+    updateScore("#fe8c21", Hawking);
   }
 };
 const updateScore = (updateColor: string, updateFont: string) => {
@@ -164,7 +164,7 @@ import Hawking from "@/assets/Hawking.png";
 import Click from "@/assets/Click.png";
 const colorArr = ["#24dfb0", "#207ffe", "#fe8c21"];
 const specialArr = ["", "", "!"];
-const fontArr = [Yoyo, Hawking, Click, ""];
+const fontArr = [Click, Yoyo, Hawking, ""];
 const color = ref("");
 const specialFont = ref("");
 const buttonFont = ref("");
