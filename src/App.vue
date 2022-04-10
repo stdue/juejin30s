@@ -56,7 +56,8 @@
       {{ end_text }}
     </div>
     <div class="h-10"></div>
-    <div class="flex">
+    <!-- @media (min-width: 640px) { flex } -->
+    <div class="flex responsive">
       <div class="fix-width">
         <div class="button" style="background: #24dfb0" @click="buttonClick(0)">
           Click
@@ -264,6 +265,7 @@ const wrongCount = ref(0);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 .button {
   width: 150px;
@@ -280,5 +282,10 @@ const wrongCount = ref(0);
   width: 130px;
   height: 40px;
   line-height: 40px;
+}
+@media (max-width: 640px) {
+  .responsive {
+    flex-direction: column;
+  }
 }
 </style>
